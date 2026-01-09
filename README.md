@@ -4,7 +4,7 @@ A simple Flask-based web page for temples that integrates **QR codes** and **aud
 
 ---
 
-## Features
+## Features Project Structure
 
 - **QR Code Integration:** Visitors can scan the QR code to visit the temple’s official website.
 - **Audio Message:** Plays a Hindi message guiding visitors to keep the premises clean.
@@ -14,8 +14,11 @@ A simple Flask-based web page for temples that integrates **QR codes** and **aud
 
 ---
 
-Project Structure
+## Project Structure
+
+
 <img width="457" height="301" alt="image" src="https://github.com/user-attachments/assets/84d66b36-608f-4341-a473-a74a5d3a0e81" />
+
 
 ---
 
