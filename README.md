@@ -16,19 +16,14 @@ A simple Flask-based web page for temples that integrates **QR codes** and **aud
 
 Project Structure
 temple-phygital/
-│
-├── app.py                  # Main Flask application
-│
+├── app.py
 ├── templates/
-│   └── index.html          # Main HTML page
-│
+│   └── index.html
 ├── static/
 │   ├── audio/
-│   │   └── radhasoami_message.mp3   # Hindi audio message (TTS)
-│   │
-│   └── temple_qr.png       # QR code image
-│
-└── README.md               # Project documentation
+│   │   └── message.mp3
+│   └── temple_qr.png
+└── README.md
 ---
 
 ## Setup Instructions
