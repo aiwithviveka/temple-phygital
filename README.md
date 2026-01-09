@@ -34,43 +34,47 @@ temple-phygital/
 
 ## Setup Instructions
 
-1. **Clone the repository:**
-
-```bash
+🚀 Setup Instructions
+1. Clone the repository
 git clone https://github.com/aiwithviveka/temple-phygital.git
 cd temple-phygital
 
-2. **Install dependencies:**
-
+2. Install dependencies
 pip install flask gTTS
 
-
-3. **Run the Flask app:**
-
+3. Run the Flask app
 flask run --host=0.0.0.0 --port=5000
 
-
-4. **Open in browser:**
-
+4. Open in browser
 http://127.0.0.1:5000/
 
 
-Note: For phone scanning, make sure your phone is on the same Wi-Fi as your computer, or deploy to a public server.
+Note:
+For phone scanning, make sure your phone is connected to the same Wi-Fi network as your computer, or deploy the app to a public server.
 
-**Customization**
+⚙️ Customization
 
-Replace static/audio/radhasoami_message.mp3 with your own audio message.
+Change Audio Message
+Replace the file:
 
-Replace static/temple_qr.png with a new QR code image.
+static/audio/radhasoami_message.mp3
 
-Update templates/index.html to change headings, text, or styling.
 
-**License**
+Update QR Code
+Replace the QR image:
 
+static/temple_qr.png
+
+
+Modify Text or Design
+Edit the HTML file:
+
+templates/index.html
+
+📜 License
 This project is open source and free to use for educational and devotional purposes.
 
-**Author**
-
+👤 Author
 Viveka Sharma
 
 
