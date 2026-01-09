@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jai Mata Di</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .qr-code {
-            margin-bottom: 30px; /* space between QR and audio */
-        }
-        img {
-            max-width: 300px; /* ensure QR is not too small on mobile */
-            width: 100%;
-            height: auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Maa Chinnamasta Devi</title>
+<link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
-    <!-- Updated heading -->
-    <h1>Jai Mata Di</h1>
 
-    <!-- Updated message -->
-    <p>कृपया यहाँ QR पर स्कैन करें विवरण के लिए</p>
+<!-- IMAGE FIRST -->
+<div id="imageScreen">
+    <img src="/static/images/image.jpg" alt="Temple Image">
+</div>
 
-    <!-- QR code clickable -->
-    <div class="qr-code">
-        <a href="https://www.matashrichintpurni.com/" target="_blank">
-            <img src="/static/temple_qr.png" alt="QR Code">
-        </a>
+<!-- LANGUAGE POPUP -->
+<div id="langPopup" class="popup">
+    <div class="popup-content">
+        <h3>Select Language / भाषा चुनें</h3>
+        <button onclick="loadContent('en')">English</button>
+        <button onclick="loadContent('hi')">हिंदी</button>
     </div>
+</div>
 
-    <!-- Audio with Hindi message -->
-    <audio controls>
-        <source src="/static/audio/message.mp3" type="audio/mpeg">
-        आपका ब्राउज़र ऑडियो टैग को सपोर्ट नहीं करता।
-    </audio>
+<!-- MAIN CONTENT -->
+<div id="content">
+    <h2 id="title"></h2>
+    <p id="history"></p>
+
+    <audio id="audio" controls></audio>
+
+    <h3>Scan for Official Website</h3>
+    <a href="https://www.matashrichintpurni.com/index.php" target="_blank">
+        <img src="/static/temple_qr.png" class="qr">
+    </a>
+</div>
+
+<script>
+window.onload = function () {
+    setTimeout(() => {
+        document.getElementById("langPopup").style.display = "flex";
+    }, 1500);
+};
+
+function loadContent(lang) {
+    document.getElementById("langPopup").style.display = "none";
+    document.getElementById("imageScreen").style.display = "none";
+    document.getElementById("content").style.display = "block";
+
+    if (lang === "en") {
+        document.getElementById("title").innerText =
+            "Maa Bhagwati Chinnamasta Devi";
+
+        document.getElementById("history").innerText =
+`This is the old Temple of Mata Bhagwati Chinnamasta Devi.
+According to Shri Markandeye Puran, after killing all Asuras,
+Maa Bhagwati cut her own head to quench the thirst of her sahyoginis Jaya and Vijaya.
+Hence She is called Maa Chinnamastika.
+
+The temple is guarded by Lord Rudra Mahadev from all four sides:
+East – Kaleshwar Mahadev
+West – Narahna Mahadev
+North – Muchhkund Mahadev
+South – Shiv Bari Temple.
+
+Pandit Mai Das was a devoted worshipper.
+Since Maa relieved him from all worries, this place became known as Chintpurni.`;
+
+        document.getElementById("audio").src =
+            "/static/audio/history_en.mp3";
+    }
+
+    else {
+        document.getElementById("title").innerText =
+            "माता भगवती छिन्नमस्ता देवी";
+
+        document.getElementById("history").innerText =
+`यह माता भगवती छिन्नमस्ता देवी का प्राचीन मंदिर है।
+श्री मार्कण्डेय पुराण के अनुसार, युद्ध के बाद माता ने स्वयं अपना शीश काटकर
+अपनी सह्योगिनियों की प्यास शांत की।
+
+चारों दिशाओं में महादेव के मंदिर स्थित हैं:
+पूर्व – कालेश्वर महादेव
+पश्चिम – नरहणा महादेव
+उत्तर – मुच्छकुंद महादेव
+दक्षिण – शिव बाड़ी मंदिर।
+
+पंडित माई दास माता के परम भक्त थे।
+माता द्वारा चिंता हरण के कारण यह स्थान चिंतपूर्णी कहलाया।`;
+
+        document.getElementById("audio").src =
+            "/static/audio/history_hi.mp3";
+    }
+}
+</script>
+
 </body>
 </html>

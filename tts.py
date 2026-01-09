@@ -1,13 +1,16 @@
 from gtts import gTTS
+import os
 
-# Your Hindi message
-message = "Jai Mata Di. कृपया परिसर को स्वच्छ रखें और प्लास्टिक का उपयोग न करें।"
+os.makedirs("static/audio", exist_ok=True)
 
-# Generate TTS in Hindi
-tts = gTTS(text=message, lang='hi')  # 'hi' for Hindi
+# Hindi history
+hi_text = "जय माता दी। श्री चिंतपूर्णी माता मंदिर हिमाचल प्रदेश का प्रसिद्ध शक्तिपीठ है। कृपया परिसर को स्वच्छ रखें।"
+hi_tts = gTTS(text=hi_text, lang="hi")
+hi_tts.save("static/audio/history_hi.mp3")
 
-# Save audio file in your Flask static folder
-tts.save("static/audio/message.mp3")
+# English history
+en_text = "Jai Mata Di. Chintpurni Temple is a famous Shakti Peeth in Himachal Pradesh. Please keep the premises clean."
+en_tts = gTTS(text=en_text, lang="en")
+en_tts.save("static/audio/history_en.mp3")
 
-print("Audio generated successfully!")
-
+print("✅ Hindi & English audio generated")
