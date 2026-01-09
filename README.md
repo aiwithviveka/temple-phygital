@@ -16,8 +16,8 @@ A simple Flask-based web page for temples that integrates **QR codes** and **aud
 
 ## Project Structure
 
+<img width="749" height="489" alt="image" src="https://github.com/user-attachments/assets/f3e3e9ed-2257-4bf8-8e84-7d930ee0c390" />
 
-<img width="457" height="301" alt="image" src="https://github.com/user-attachments/assets/84d66b36-608f-4341-a473-a74a5d3a0e81" />
 
 
 ---
