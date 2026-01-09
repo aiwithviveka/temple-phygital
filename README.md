@@ -22,7 +22,7 @@ A simple Flask-based web page for temples that integrates **QR codes** and **aud
 
 ---
 
-## Setup Instructions
+## Setup Instructions Customization
 
 1. Clone the repository
 git clone https://github.com/aiwithviveka/temple-phygital.git
@@ -41,7 +41,7 @@ http://127.0.0.1:5000/
 Note:
 For phone scanning, make sure your phone is connected to the same Wi-Fi network as your computer, or deploy the app to a public server.
 
-⚙️ Customization
+## Customization License
 
 Change Audio Message
 Replace the file:
@@ -60,10 +60,12 @@ Edit the HTML file:
 
 templates/index.html
 
-📜 License
+## License
+
 This project is open source and free to use for educational and devotional purposes.
 
 👤 Author
+
 Viveka Sharma
 
 
