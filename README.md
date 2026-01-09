@@ -46,7 +46,7 @@ For phone scanning, make sure your phone is connected to the same Wi-Fi network 
 Change Audio Message
 Replace the file:
 
-static/audio/radhasoami_message.mp3
+static/audio/message.mp3
 
 
 Update QR Code
